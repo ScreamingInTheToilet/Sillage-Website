@@ -1,0 +1,215 @@
+/* Reset & Base Styles */
+/* Applies to all elements */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+    font-family: 'Arial', sans-serif; /* Sets default font for all elements */
+}
+
+/* Applies to the entire page */
+body {
+    background: #f8f8f8; /* Light gray background */
+    color: #333; /* Dark gray text color (more readable on light background) */
+}
+
+/* -------------------- NAVIGATION BAR -------------------- */
+
+/* Styles the entire nav bar */
+nav {
+    position: sticky; /* Keeps the nav bar fixed at the top while scrolling */
+    top: 0; /* Distance from top when sticky */
+    z-index: 1000; /* Makes sure nav stays above other content */
+    
+    display: flex; /* Flex layout for inner nav elements */
+    justify-content: space-between; /* Pushes logo left and nav links right */
+    align-items: center; /* Vertically centers nav content */
+    padding: 20px 50px; /* Space inside the nav: 20px top/bottom, 50px left/right */
+    background: #fff; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styles the website logo text */
+.logo a {
+    font-size: 24px; /* Large font for visibility */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Removes underline from link */
+    color: #000; /* Black color */
+}
+
+/* Container for navigation links (ul) */
+.nav-links {
+    display: flex; /* Aligns nav items in a row */
+    list-style: none; /* Removes bullets from list items */
+    gap: 30px; /* Space between each nav item */
+}
+
+/* Styles individual nav links (a tags) */
+.nav-links a {
+    text-decoration: none; /* No underline */
+    color: #333; /* Dark gray text */
+    font-weight: 500; /* Medium font weight */
+}
+
+/* Styles the shopping cart icon */
+.cart-icon i {
+    font-size: 20px; /* Sets icon size */
+    cursor: pointer; /* Changes cursor to hand on hover */
+}
+
+/* -------------------- HERO SECTION -------------------- */
+
+/* Styles the large banner section at the top */
+.hero {
+    height: 70vh; /* 70% of the viewport height */
+    background: url('images/hero-bg.jpg') no-repeat center/cover; 
+    /* Adds background image, centers it, covers whole section */
+    display: flex; /* Flexbox to center content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center; /* Center text */
+    color: black; /* Text color */
+}
+
+/* Main headline in hero */
+.hero h1 {
+    font-size: 3rem; /* Large text */
+    margin-bottom: 20px; /* Space below the headline */
+}
+
+/* Subheading in hero */
+.hero p {
+    font-size: 1.2rem; /* Medium font */
+    margin-bottom: 30px; /* Space below subheading */
+}
+
+/* Button style shared by multiple elements */
+.btn {
+    padding: 12px 30px; /* Button size */
+    background: #000; /* Black background */
+    color: #fff; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    transition: 0.3s; /* Smooth hover animation */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: #333; /* Darker background on hover */
+}
+
+/* -------------------- PRODUCTS SECTION -------------------- */
+
+/* Section for displaying products */
+.products {
+    padding: 80px 50px; /* Space around the section */
+    text-align: center; /* Center-align content */
+}
+
+/* Title inside products section */
+.products h2 {
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 50px; /* Space below heading */
+}
+
+/* Grid layout for product cards */
+.product-grid {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    /* Responsive columns that fill space */
+    gap: 30px; /* Space between cards */
+}
+
+/* Individual product card */
+.product-card {
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hides content that spills outside */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: 0.3s; /* Smooth hover animation */
+}
+
+/* Hover effect: lift card slightly */
+.product-card:hover {
+    transform: translateY(-10px); /* Moves up on hover */
+}
+
+/* Product image styling */
+.product-card img {
+    width: 100%; /* Full width of container */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Scales image to fill while maintaining aspect */
+}
+
+/* Product name/title */
+.product-card h3 {
+    margin: 15px 0; /* Vertical spacing */
+}
+
+/* Product price or short description */
+.product-card p {
+    font-weight: bold; /* Emphasized text */
+    margin-bottom: 15px; /* Space below */
+}
+
+/* Add-to-cart button inside product card */
+.add-to-cart {
+    padding: 10px 20px; /* Size of button */
+    background: #000; /* Black background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 20px; /* Space below */
+    transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Hover effect for cart button */
+.add-to-cart:hover {
+    background: #333; /* Darker on hover */
+}
+
+/* -------------------- FOOTER -------------------- */
+
+/* Footer styling */
+footer {
+    background: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+    padding: 30px; /* Inner spacing */
+    display: flex; /* Layout content side by side */
+    justify-content: space-between; /* Pushes items to edges */
+    align-items: center; /* Centers items vertically */
+}
+
+/* Container for social media links/icons */
+.social-links {
+    display: flex; /* Align icons in a row */
+    gap: 20px; /* Space between icons */
+}
+
+/* Style for individual social icon links */
+.social-links a {
+    color: #fff; /* White icons */
+    font-size: 20px; /* Icon size */
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+
+/* Applies when screen is 768px or smaller */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px; /* Smaller padding on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hides nav links on small screens */
+        /* You would replace this with a burger menu in JS */
+    }
+    
+    .hero h1 {
+        font-size: 2rem; /* Smaller heading text for mobile */
+    }
+}

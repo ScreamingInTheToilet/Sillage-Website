@@ -196,6 +196,51 @@ footer {
     font-size: 20px; /* Icon size */
 }
 
+/*Styling the burger icon for smaller screens*/
+.burger {
+  display: none;
+  /*This icon will not be displayed*/
+  flex-direction: column;
+  cursor: pointer;
+}
+/*Styling the lines that make up the burger icon*/
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: gray;
+  margin: 4px 0;
+}
+
+/*Styling the menu for smaller screens*/
+.menu {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background-color: whitesmoke;
+    position: absolute; /* absolute to position relative to navbar or container */
+    top: 100px;         /* adjust vertical position */
+    left: 50%;          /* place left edge at 50% */
+    transform: translateX(-50%); /* shift back by 50% of its own width */
+    width: 150px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*Adding shadow*/
+}
+
+
+.menu a { /*Styling the links in the burger menu*/
+  display: block;       /* Make links take full width */
+  width: 100%;          /* Ensure full width */
+  text-align: center;   /* Center the text inside the link */
+  color: black;         /* or your preferred color */
+  padding: 10px;        /* for clickable area */
+  text-decoration: none;
+}
+
+
+.menu.show {/*This targets the element with both class attributes "menu" and "show*/
+    display: flex;
+}
+
 /* -------------------- RESPONSIVE DESIGN -------------------- */
 
 /* Applies when screen is 768px or smaller */
@@ -208,8 +253,12 @@ footer {
         display: none; /* Hides nav links on small screens */
         /* You would replace this with a burger menu in JS */
     }
-    
+
     .hero h1 {
         font-size: 2rem; /* Smaller heading text for mobile */
+    }
+
+    .burger { /*Showing the burger icon for small screens*/
+        display:flex;
     }
 }

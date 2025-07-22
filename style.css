@@ -9,8 +9,12 @@
 
 /* Applies to the entire page */
 body {
-    background: #f8f8f8; /* Light gray background */
-    color: #333; /* Dark gray text color (more readable on light background) */
+  background: #f8f8f8;                /* Light gray background */
+  color: #333;                       /* Dark gray text */
+  background-image: url("tuff.jpg");/* Set image background */
+  background-size: contain;     /* Width 800px, height 1000px */
+  background-repeat: no-repeat;      /* Single image, no repeat */
+  background-position: center;       /* Center the image */
 }
 
 /* -------------------- NAVIGATION BAR -------------------- */
@@ -31,8 +35,9 @@ nav {
 
 /* Styles the website logo text */
 .logo a {
-    font-size: 24px; /* Large font for visibility */
+    font-size: 30px; /* Large font for visibility */
     font-weight: bold; /* Bold text */
+    font-family: 'Rock Salt';
     text-decoration: none; /* Removes underline from link */
     color: #000; /* Black color */
 }
@@ -55,6 +60,7 @@ nav {
 .cart-icon i {
     font-size: 20px; /* Sets icon size */
     cursor: pointer; /* Changes cursor to hand on hover */
+    color:black;
 }
 
 /* -------------------- HERO SECTION -------------------- */
@@ -82,6 +88,11 @@ nav {
 .hero p {
     font-size: 1.2rem; /* Medium font */
     margin-bottom: 30px; /* Space below subheading */
+}
+
+/*Styling sum specific words*/
+.black {
+    color:white;
 }
 
 /* Button style shared by multiple elements */
@@ -124,7 +135,7 @@ nav {
 
 /* Individual product card */
 .product-card {
-    background: #fff; /* White background */
+    background: whitesmoke; /* White background */
     border-radius: 10px; /* Rounded corners */
     overflow: hidden; /* Hides content that spills outside */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
